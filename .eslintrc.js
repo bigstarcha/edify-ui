@@ -8,7 +8,7 @@ module.exports = {
         'eslint:recommended',
         'plugin:react/recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:@next/next/recommended'
+        'plugin:@next/next/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -42,6 +42,11 @@ module.exports = {
         'react/prop-types': 'off',
     },
     settings: {
+        'import/resolver': {
+            typescript: {
+                project: './tsconfig.json',
+            },
+        },
         react: {
             version: 'detect',
         },
