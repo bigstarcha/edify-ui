@@ -9,7 +9,14 @@ interface ButtonProps {
 }
 
 function Button({ buttonText, ghostMode, onClick }: ButtonProps) {
-    return <button className={ghostMode ? ghostButtonStyle : buttonStyle} onClick={(event) => onClick(event)}>{buttonText}</button>;
+    return (
+        <button
+            className={ghostMode ? ghostButtonStyle : buttonStyle}
+            onClick={(event) => onClick(event)}
+        >
+            {buttonText}
+        </button>
+    );
 }
 
 export default React.memo(Button);
