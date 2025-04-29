@@ -8,7 +8,7 @@ const robotoCondensed = Roboto_Condensed({
     weight: '400',
 });
 
-const isAuthenticated = false; // Placeholder for auth check
+const isAuthenticated = true; // Placeholder for auth check
 
 function RootLayout({ children }) {
     return (

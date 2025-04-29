@@ -7,17 +7,17 @@ import {
     IoSearch,
     IoPerson,
     IoSettingsSharp,
-    IoExit
+    IoExit,
 } from 'react-icons/io5';
 import logo from '../assets/images/new_edify_logo.png';
 
 type LogoType = {
     src: string;
-}
+};
 
-const navOptionStyle = 'flex items-center text-gray-500 hover:text-gray-700 text-2xl';
+const navOptionStyle =
+    'flex items-center text-gray-500 hover:text-gray-700 text-2xl';
 const navTextStyle = 'ml-5 text-primary-400 hover:text-primary-600';
-
 
 // This is bs, I do not know how it works. logo is a string type yet it has a src property
 const { src } = logo as unknown as LogoType;
@@ -25,12 +25,12 @@ const { src } = logo as unknown as LogoType;
 function Navbar() {
     return (
         <nav>
-            <div className="flex flex-col w-80 h-screen border-r-2 border-primary-600 pt-5 pl-7 pr-7">
+            <div className="flex flex-col w-75 h-screen border-r-2 border-primary-600 pt-5 pl-7 pr-7">
                 {/** You will need items-center and justify-center to center the image! */}
                 <div className="flex w-full items-center justify-center">
                     <img className="mb-13" src={src} width={180} />
                 </div>
-                <ul className="flex flex-col space-y-4">
+                <ul className="flex flex-col space-y-7">
                     <li className={navOptionStyle}>
                         <IoHome />
                         <Link className={navTextStyle} href="/">
@@ -51,7 +51,7 @@ function Navbar() {
                     </li>
                     <li className={navOptionStyle}>
                         <IoPerson />
-                        <Link className={navTextStyle} href="/settings">
+                        <Link className={navTextStyle} href="/profiles/me">
                             My Profile
                         </Link>
                     </li>
@@ -63,7 +63,7 @@ function Navbar() {
                     </li>
                     <li className={navOptionStyle}>
                         <IoExit />
-                        <Link className={navTextStyle} href="/settings">
+                        <Link className={navTextStyle} href="/logout">
                             Logout
                         </Link>
                     </li>
