@@ -1,5 +1,5 @@
 import React from 'react';
-import MessagingPage from '@components/MessagingPage';
+import MessagingPage from '@components/messaging/MessagingPage';
 
 export default function MessagesLayout({
     children,
