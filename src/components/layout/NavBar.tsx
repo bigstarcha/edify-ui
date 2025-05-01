@@ -4,12 +4,13 @@ import React from 'react';
 import {
     IoHome,
     IoChatbubbleEllipsesSharp,
+    IoAddCircleSharp,
     IoSearch,
     IoPerson,
     IoSettingsSharp,
     IoExit,
 } from 'react-icons/io5';
-import logo from '../assets/images/new_edify_logo.png';
+import logo from '../../assets/images/new_edify_logo.png';
 
 type LogoType = {
     src: string;
@@ -25,10 +26,10 @@ const { src } = logo as unknown as LogoType;
 function Navbar() {
     return (
         <nav>
-            <div className="flex flex-col w-75 h-screen border-r-2 border-primary-600 pt-5 pl-7 pr-7">
+            <div className="flex flex-col w-70 h-screen border-r-1 shadow-lg border-gray-200 pt-5 pl-7 pr-7">
                 {/** You will need items-center and justify-center to center the image! */}
                 <div className="flex w-full items-center justify-center">
-                    <img className="mb-13" src={src} width={180} />
+                    <img className="mb-13" src={src} width={175} />
                 </div>
                 <ul className="flex flex-col space-y-7">
                     <li className={navOptionStyle}>
@@ -41,6 +42,12 @@ function Navbar() {
                         <IoSearch />
                         <Link className={navTextStyle} href="/search">
                             Search
+                        </Link>
+                    </li>
+                    <li className={navOptionStyle}>
+                        <IoAddCircleSharp />
+                        <Link className={navTextStyle} href="/post">
+                            Post
                         </Link>
                     </li>
                     <li className={navOptionStyle}>

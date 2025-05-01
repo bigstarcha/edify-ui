@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation';
 import WelcomePage from '@components/WelcomePage';
 import HomePage from '@components/HomePage';
 
@@ -9,5 +10,8 @@ export default function Home() {
      * Based on whether the user is logged in, we display the user's home page or the
      * welcome page.
      */
-    return isAuthenticated ? <HomePage /> : <WelcomePage />;
+    if (!isAuthenticated) {
+        redirect('/login');
+    }
+    return <HomePage />;
 }

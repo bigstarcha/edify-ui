@@ -2,6 +2,7 @@
 
 import React from 'react';
 import logo from '../assets/images/new_edify_logo.png';
+import Link from 'next/link';
 
 const bgImageStyle = `bg-[url(../assets/images/welcome2.JPG)] bg-cover w-3/5 h-screen rounded-r-[250px]`;
 
@@ -46,12 +47,12 @@ function WelcomePage() {
                     >
                         Sign Up
                     </button>
-                    <a
+                    <Link
                         href="/forgot-password"
                         className="text-gray-400 hover:text-gray-600 text-sm mt-5"
                     >
                         Forgot Your Password?
-                    </a>
+                    </Link>
                 </div>
             </div>
         </>
