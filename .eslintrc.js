@@ -8,7 +8,7 @@ module.exports = {
         'eslint:recommended',
         'plugin:react/recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:@next/next/recommended'
+        'plugin:@next/next/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -40,8 +40,14 @@ module.exports = {
         ],
         'no-console': 'warn',
         'react/prop-types': 'off',
+        '@next/next/no-html-link-for-pages': 'warn'
     },
     settings: {
+        'import/resolver': {
+            typescript: {
+                project: './tsconfig.json',
+            },
+        },
         react: {
             version: 'detect',
         },
