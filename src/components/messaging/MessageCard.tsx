@@ -9,7 +9,11 @@ function MessageCard({ user }: { user: string }) {
     // For some reason I can't get the image to show up when I pass the src as a prop. This is gonna be a problem when grabbing image urls from S3.
 
     return (
-        <button onClick={() => {alert(`Message was clicked for user ${user}`)}}>
+        <button
+            onClick={() => {
+                alert(`Message was clicked for user ${user}`);
+            }}
+        >
             <div className="flex flex-row border-solid py-3 px-7 hover:bg-gray-300 transition duration-200">
                 <Image
                     src={src}
@@ -17,7 +21,7 @@ function MessageCard({ user }: { user: string }) {
                     height={70}
                     width={70}
                     style={{
-                        borderRadius: 35
+                        borderRadius: 35,
                     }}
                 />
                 <div className="flex flex-col ml-[20px] text-left justify-center">

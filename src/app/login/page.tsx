@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
-import WelcomePage from "@components/WelcomePage";
+import WelcomePage from '@components/WelcomePage';
 
 export default function Login() {
     const isAuthenticated = true;

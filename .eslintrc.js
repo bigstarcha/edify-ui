@@ -19,13 +19,15 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: ['react', '@typescript-eslint'],
-    overrides: {
-        'files': ['**/tests/**/*'],
-        'plugins': ['jest'],
-        'env': {
-            'jest/globals': true
-        }
-    },
+    overrides: [
+        {
+            files: ['**/tests/**/*'],
+            plugins: ['jest'],
+            env: {
+                'jest/globals': true,
+            },
+        },
+    ],
     rules: {
         'react/react-in-jsx-scope': 'off',
         '@typescript-eslint/no-unused-vars': [
@@ -47,7 +49,7 @@ module.exports = {
         ],
         'no-console': 'warn',
         'react/prop-types': 'off',
-        '@next/next/no-html-link-for-pages': 'warn'
+        '@next/next/no-html-link-for-pages': ['error', '/pages'],
     },
     settings: {
         'import/resolver': {
