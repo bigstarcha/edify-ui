@@ -40,6 +40,7 @@ module.exports = {
         ],
         'no-console': 'warn',
         'react/prop-types': 'off',
+        '@next/next/no-html-link-for-pages': 'warn'
     },
     settings: {
         'import/resolver': {
