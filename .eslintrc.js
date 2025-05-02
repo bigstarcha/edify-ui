@@ -19,6 +19,13 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: ['react', '@typescript-eslint'],
+    overrides: {
+        'files': ['**/tests/**/*'],
+        'plugins': ['jest'],
+        'env': {
+            'jest/globals': true
+        }
+    },
     rules: {
         'react/react-in-jsx-scope': 'off',
         '@typescript-eslint/no-unused-vars': [
