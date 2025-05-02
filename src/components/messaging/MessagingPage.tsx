@@ -13,13 +13,16 @@ function MessagingPage({ children }: { children: ReactNode }) {
             <MessagingPanel />
             <div className="flex flex-col w-71/96 h-[calc(100vh-56px)]">
                 {children}
-                <form className="flex items-center h-1/10 px-7" onSubmit={handleSubmit}>
+                <form
+                    className="flex items-center h-1/10 px-7"
+                    onSubmit={handleSubmit}
+                >
                     <input
                         className="text-lg w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-primary-400"
                         type="text"
                         value={message}
-                        onChange={e => setMessage(e.target.value)}
-                        onKeyDown={e => {
+                        onChange={(e) => setMessage(e.target.value)}
+                        onKeyDown={(e) => {
                             if (e.key === 'Enter') {
                                 e.preventDefault();
                                 handleSubmit();

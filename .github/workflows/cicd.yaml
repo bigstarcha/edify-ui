@@ -10,7 +10,7 @@ on:
             - staging
 
 jobs:
-    build:
+    ci:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repo
@@ -21,8 +21,6 @@ jobs:
                   node-version: '23'
             - name: Install dependencies
               run: yarn
-            - name: Prettier
-              run: yarn fix
             - name: Lint
               run: yarn lint
             - name: Build

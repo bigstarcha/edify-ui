@@ -2,9 +2,7 @@
 import React, { useState } from 'react';
 import _ from 'lodash';
 import MessageCard from './MessageCard';
-import {
-    IoCreateOutline
-} from 'react-icons/io5';
+import { IoCreateOutline } from 'react-icons/io5';
 
 function MessagingPanel() {
     // Currently seeing a react hydration error, will fix later.
@@ -14,7 +12,9 @@ function MessagingPanel() {
         <div className="flex flex-col w-25/96 h-[calc(100vh-56px)] overflow-y-scroll">
             <div className="flex flex-row mt-[15px] px-7 justify-between w-full">
                 <h1 className="text-3xl font-semibold">Messages</h1>
-                <button className="text-3xl pb-[10px]"><IoCreateOutline /></button>
+                <button className="text-3xl pb-[10px]">
+                    <IoCreateOutline />
+                </button>
             </div>
             <input
                 type="search"
