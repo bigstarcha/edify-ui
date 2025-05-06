@@ -4,6 +4,7 @@ import MessagingPanel from '@components/messaging/MessagingPanel';
 
 function MessagingPage({ children }: { children: ReactNode }) {
     const [message, setMessage] = useState('');
+    // Not sure why the whole page is rerendering on handleSubmit
     const handleSubmit = useCallback(() => {
         alert('Message sent!');
     }, []);
