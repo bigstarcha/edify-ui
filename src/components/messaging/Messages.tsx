@@ -43,7 +43,7 @@ function Messages() {
     return (
         <div className="flex flex-col w-full h-9/10 mt-[20px]">
             {/** @todo: We only want shadows to apply to the bottom of following div. Fix this */}
-            <div className="flex flex-row px-7 items-center shadow-sm pb-[20px]">
+            <div className="flex flex-row px-7 items-center pb-[20px]">
                 <Image
                     src={sampleperson}
                     alt="Sample Bio"
