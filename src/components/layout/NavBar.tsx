@@ -26,7 +26,7 @@ const { src } = logo as unknown as LogoType;
 function Navbar() {
     return (
         <nav>
-            <div className="flex flex-col w-70 h-screen border-r-1 shadow-lg border-gray-200 pt-5 pl-7 pr-7">
+            <div className="flex flex-col w-70 h-screen border-r-1 shadow-md border-gray-200 pt-5 pl-7 pr-7">
                 {/** You will need items-center and justify-center to center the image! */}
                 <div className="flex w-full items-center justify-center">
                     <img className="mb-13" src={src} width={175} />

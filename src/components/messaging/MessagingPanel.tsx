@@ -19,7 +19,7 @@ function MessagingPanel() {
             <input
                 type="search"
                 placeholder="Search Messages..."
-                className="border border-gray-300 rounded-md p-2 mx-5 mt-[15px] mb-[15px] text-lg focus:outline-none focus:ring focus:ring-primary-400"
+                className="border border-gray-300 rounded-lg px-3 py-2 mx-5 mt-[15px] mb-[15px] text-lg focus:outline-none focus:ring focus:ring-primary-400"
             />
             {_.fill(Array(12), 0).map((index) => (
                 <MessageCard user="Brandon Lake" />

@@ -1,3 +1,10 @@
+import SearchPage from '@components/search/SearchPage';
+
 export default function Search() {
-    return <div>This is your search page!</div>;
+    // Not really sure if a layout is needed, but we shall see.
+    return (
+        <div className="h-[calc(100vh-56px)] w-full">
+            <SearchPage />
+        </div>
+    );
 }

@@ -19,7 +19,7 @@ function MessagingPage({ children }: { children: ReactNode }) {
                     onSubmit={handleSubmit}
                 >
                     <input
-                        className="text-lg w-full h-10 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-primary-400"
+                        className="text-lg w-full h-10 border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-primary-400"
                         type="text"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
